@@ -116,7 +116,7 @@ namespace Valve.VR
             }
             else
             {
-                SteamVR.Initialize(false);
+                SteamVR.Initialize(true);
             }
         }
 
