@@ -25,3 +25,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: qff
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5606786391528144970
+      m_GuidHigh: 48405507541527690
+    m_SerializedTextureGuid:
+      m_GuidLow: 14345155190610291014
+      m_GuidHigh: 16202303320828765705
+    m_Size: {x: 0.109178744, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: 1
+    m_Texture: {fileID: 0}
