@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/AR_Android.unity
     guid: 73df9474eeb56d841ac2a92f52dd9424
+  - enabled: 1
+    path: Assets/Plane_Tracking.unity
+    guid: 422cf70173be42d4dbece337c2715508
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f5d5ad75b37ae8c4ea467148d101aa71, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8eebc1efd808ce3459eacc5638970c81, type: 2}
