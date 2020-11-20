@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BottleScript : MonoBehaviour {
     public GameObject bottleBroken;
-
     private void OnCollisionEnter(Collision collision) {
         if (collision.relativeVelocity.magnitude > 3.0f) {
             Rigidbody orb = GetComponent<Rigidbody>();
