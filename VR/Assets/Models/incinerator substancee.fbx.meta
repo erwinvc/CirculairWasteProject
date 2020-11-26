@@ -3,7 +3,27 @@ guid: 99cf78d5ea65701459896772cce36627
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Feet
+    second: {fileID: 2100000, guid: ef67f8978fe14714a9bb3ad4564c5acc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame
+    second: {fileID: 2100000, guid: d67f6b0d95ad18147bbf92fc5f177ea9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof
+    second: {fileID: 2100000, guid: 747223822cb7a824eb55ef001a1ece33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shell
+    second: {fileID: 2100000, guid: 76d5f718a8d42e84ba8e28bcecb2b08f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -45,7 +65,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -57,13 +77,13 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
-    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinLightmapResolution: 20
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
