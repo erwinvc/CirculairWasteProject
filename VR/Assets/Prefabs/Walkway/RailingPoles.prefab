@@ -11,12 +11,18 @@ GameObject:
   - component: {fileID: 1545960854972271556}
   - component: {fileID: 6368550484676954795}
   - component: {fileID: 8798391851484710297}
+  - component: {fileID: 2411213428836239301}
+  - component: {fileID: 5345397265370043982}
+  - component: {fileID: 336090404163744121}
+  - component: {fileID: 1246295977784989657}
+  - component: {fileID: 3590931730392631957}
+  - component: {fileID: 6109901126902357920}
   m_Layer: 0
   m_Name: RailingPoles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1545960854972271556
 Transform:
@@ -82,3 +88,81 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2411213428836239301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.05, y: 0.05, z: 0.050000012}
+  m_Center: {x: 0, y: 0.095, z: 0}
+--- !u!65 &5345397265370043982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.05, y: 0.05, z: 0.050000012}
+  m_Center: {x: 0, y: 0.495, z: 0}
+--- !u!65 &336090404163744121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.05, y: 0.05, z: 0.050000012}
+  m_Center: {x: 0, y: -0.11, z: 0}
+--- !u!65 &1246295977784989657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.05, y: 0.05, z: 0.050000012}
+  m_Center: {x: 0, y: -0.31, z: 0}
+--- !u!65 &3590931730392631957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 1.0247281, z: 0.050000012}
+  m_Center: {x: 0.5, y: 0, z: 0}
+--- !u!65 &6109901126902357920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781621989957941549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 1.0247281, z: 0.050000012}
+  m_Center: {x: -0.5, y: 0, z: 0}
