@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2416924765595340923}
   m_Layer: 0
   m_Name: Cylinder 2
-  m_TagString: Untagged
+  m_TagString: WasteMetal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

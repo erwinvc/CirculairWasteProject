@@ -11,12 +11,10 @@ public class ConveyorBelt : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody>();
         pos = transform.position;
-        }
+    }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         rb.position += (transform.right * Time.fixedDeltaTime * speed);
         rb.MovePosition(pos);
-
     }
 }

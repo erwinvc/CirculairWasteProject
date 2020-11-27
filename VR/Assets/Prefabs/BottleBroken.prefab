@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 5030746234111810970}
   m_Layer: 0
   m_Name: BottleBroken
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

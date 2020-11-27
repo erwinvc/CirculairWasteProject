@@ -108,7 +108,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		public override bool ShouldActivate( Vector3 playerPosition )
 		{
-			return ( Vector3.Distance( transform.position, playerPosition ) > 1.0f );
+			return ( Vector3.Distance( transform.position, playerPosition ) > 0.5f );
 		}
 
 
