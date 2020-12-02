@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
+
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
@@ -17,40 +17,22 @@ public class LinearMappingObjectController : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody>();
     }
+
     void FixedUpdate() {
+        /*Update position based on sliders*/
         velocity *= 0.95f;
         velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, -(mapUpDown.value - 0.5f) * speed, (mapVertical.value - 0.5f) * speed);
-
         rb.MovePosition(transform.position +  velocity);
 
-        if (transform.position.x > bounds.max.x) {
-            transform.position = new Vector3(bounds.max.x, transform.position.y, transform.position.z);
-            velocity.x = 0.0f;
-        }
-
-        if (transform.position.x < bounds.min.x) {
-            transform.position = new Vector3(bounds.min.x, transform.position.y, transform.position.z);
-            velocity.x = 0.0f;
-        }
-
-        if (transform.position.y < bounds.min.y) {
-            transform.position = new Vector3(transform.position.x, bounds.min.y, transform.position.z);
-            velocity.y = 0.0f;
-        }
-
-        if (transform.position.y > bounds.max.y) {
-            transform.position = new Vector3(transform.position.x, bounds.max.y, transform.position.z);
-            velocity.y = 0.0f;
-        }
-
-        if (transform.position.z > bounds.max.z) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, bounds.max.z);
-            velocity.z = 0.0f;
-        }
-
-        if (transform.position.z < bounds.min.z) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, bounds.min.z);
-            velocity.z = 0.0f;
-        }
+        /*Clamp position within bounds*/
+        Vector3 pos = transform.position;
+        float x = pos.x > bounds.max.x ? bounds.max.x : pos.x < bounds.min.x ? bounds.min.x : pos.x;
+        float y = pos.y > bounds.max.y ? bounds.max.y : pos.y < bounds.min.y ? bounds.min.y : pos.y;
+        float z = pos.z > bounds.max.z ? bounds.max.z : pos.z < bounds.min.z ? bounds.min.z : pos.z;
+        if (x != pos.x) velocity.x = 0;
+        if (y != pos.y) velocity.y = 0;
+        if (z != pos.z) velocity.z = 0;
+        transform.position = new Vector3(x, y, z);
     }
 }
+

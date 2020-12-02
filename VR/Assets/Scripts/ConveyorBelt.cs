@@ -7,14 +7,16 @@ public class ConveyorBelt : MonoBehaviour {
     public float speed = 0.1f;
 
     private Rigidbody rb;
-    private Vector3 pos;
+    private Vector3 originalPosition;
     private void Start() {
         rb = GetComponent<Rigidbody>();
-        pos = transform.position;
+        originalPosition = transform.position;
     }
 
     void FixedUpdate() {
         rb.position += (transform.right * Time.fixedDeltaTime * speed);
-        rb.MovePosition(pos);
+        rb.MovePosition(originalPosition);
     }
 }
+
+

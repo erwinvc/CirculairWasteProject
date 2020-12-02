@@ -118,9 +118,12 @@ namespace Valve.VR.InteractionSystem
 			return true;
 		}
 
+        public override void WhileHighlight(Vector3 position)
+        {
+        }
 
-		//-------------------------------------------------
-		public override void Highlight( bool highlight )
+        //-------------------------------------------------
+        public override void Highlight(Vector3 position, bool highlight )
 		{
 			if ( !locked )
 			{

@@ -109,6 +109,7 @@ namespace Valve.VR.InteractionSystem {
         private Vector3 startingFeetOffset = Vector3.zero;
         private bool movedFeetFarEnough = false;
 
+        private Vector3 hitPoint = Vector3.zero;
         SteamVR_Events.Action chaperoneInfoInitializedAction;
 
         [NonSerialized] public TeleportPoint currentTeleportPoint = null;
@@ -304,6 +305,7 @@ namespace Valve.VR.InteractionSystem {
             teleportArc.SetArcData(pointerStart, arcVelocity, true, pointerAtBadAngle);
             if (teleportArc.DrawArc(out hitInfo)) {
                 hitSomething = true;
+                hitPoint = hitInfo.point;
                 hitTeleportMarker = hitInfo.collider.GetComponentInParent<TeleportMarkerBase>();
             }
 
@@ -613,7 +615,7 @@ namespace Valve.VR.InteractionSystem {
                 foreach (TeleportMarkerBase teleportMarker in teleportMarkers) {
                     if (teleportMarker.markerActive && teleportMarker.ShouldActivate(player.feetPositionGuess)) {
                         teleportMarker.gameObject.SetActive(true);
-                        teleportMarker.Highlight(false);
+                        teleportMarker.Highlight(hitPoint, false);
                     }
                 }
 
@@ -799,11 +801,11 @@ namespace Valve.VR.InteractionSystem {
             if (pointedAtTeleportMarker != hitTeleportMarker) //Pointing at a new teleport marker
             {
                 if (pointedAtTeleportMarker != null) {
-                    pointedAtTeleportMarker.Highlight(false);
+                    pointedAtTeleportMarker.Highlight(hitPoint, false);
                 }
 
                 if (hitTeleportMarker != null) {
-                    hitTeleportMarker.Highlight(true);
+                    hitTeleportMarker.Highlight(hitPoint, true);
 
                     prevPointedAtPosition = pointedAtPosition;
                     PlayPointerHaptic(!hitTeleportMarker.locked);
@@ -818,6 +820,7 @@ namespace Valve.VR.InteractionSystem {
                 }
             } else if (hitTeleportMarker != null) //Pointing at the same teleport marker
               {
+                hitTeleportMarker.WhileHighlight(hitPoint);
                 if (Vector3.Distance(prevPointedAtPosition, pointedAtPosition) > 1.0f) {
                     prevPointedAtPosition = pointedAtPosition;
                     PlayPointerHaptic(!hitTeleportMarker.locked);

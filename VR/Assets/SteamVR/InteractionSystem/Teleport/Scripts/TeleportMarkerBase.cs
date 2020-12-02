@@ -43,7 +43,9 @@ namespace Valve.VR.InteractionSystem
 		public abstract void UpdateVisuals();
 
 		//-------------------------------------------------
-		public abstract void Highlight( bool highlight );
+		public abstract void Highlight(Vector3 position, bool highlight );
+
+        public abstract void WhileHighlight(Vector3 position);
 
 		//-------------------------------------------------
 		public abstract void SetAlpha( float tintAlpha, float alphaPercent );
