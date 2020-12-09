@@ -6,7 +6,8 @@ public class LookAtWristTest : MonoBehaviour {
     public GameObject head;
     public GameObject attachmentPoint;
     public GameObject sphere;
-
+    public GameObject tablet;
+    private Transform tempPosition;
     private bool armCurrentlyVisible = false;
     private float lookingAtArmValue = -0.95f;
     private float lookingAwayFromArmValue = -0.75f;
@@ -24,5 +25,22 @@ public class LookAtWristTest : MonoBehaviour {
             if (Vector3.Dot(armVector, headToArmVector) >= lookingAtArmValue || Vector3.Dot(head.transform.forward, -headToArmVector) >= lookingAtArmValue) return;
             armCurrentlyVisible = true;
         }
+
+        //if(armCurrentlyVisible)
+        //{
+        //    ShowTablet();
+        //}
+        //HideTablet();
     }
+
+    //void ShowTablet()
+    //{
+    //    tablet.SetActive(true);
+    //    tablet.transform.position = attachmentPoint.transform.position;
+    //}
+
+    //void HideTablet()
+    //{
+    //    tablet.SetActive(false);
+    //}
 }
