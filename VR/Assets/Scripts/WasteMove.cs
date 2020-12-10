@@ -13,7 +13,6 @@ public class WasteMove : MonoBehaviour {
     }
 
     public WasteType wasteType;
-    public Teleport teleport;
     public TeleportPoint playerTeleportPoint;
     private GameObject teleportPoint;
 
@@ -22,7 +21,7 @@ public class WasteMove : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (playerTeleportPoint == teleport.currentTeleportPoint) return;
+        if (playerTeleportPoint == Teleport.instance.currentTeleportMarker) return;
         if (TagToWasteType(other.tag) == wasteType) {
             Vector3 pos = Vector3.zero;
             Offset offset = other.GetComponent<Offset>();

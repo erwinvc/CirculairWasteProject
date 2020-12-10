@@ -112,7 +112,7 @@ namespace Valve.VR.InteractionSystem {
         private Vector3 hitPoint = Vector3.zero;
         SteamVR_Events.Action chaperoneInfoInitializedAction;
 
-        [NonSerialized] public TeleportPoint currentTeleportPoint = null;
+        [NonSerialized] public TeleportMarkerBase currentTeleportMarker = null;
 
         // Events
 
@@ -751,7 +751,7 @@ namespace Valve.VR.InteractionSystem {
         //-------------------------------------------------
         private void TeleportPlayer() {
             teleporting = false;
-            currentTeleportPoint = null;
+            currentTeleportMarker = null;
             Teleport.PlayerPre.Send(pointedAtTeleportMarker);
 
             SteamVR_Fade.Start(Color.clear, currentFadeTime);
@@ -761,7 +761,7 @@ namespace Valve.VR.InteractionSystem {
 
             if (teleportPoint != null) {
                 teleportPosition = teleportPoint.transform.position;
-                currentTeleportPoint = teleportPoint;
+                currentTeleportMarker = teleportPoint;
                 //Teleport to a new scene
                 if (teleportPoint.teleportType == TeleportPoint.TeleportPointType.SwitchToNewScene) {
                     teleportPoint.TeleportToScene();
