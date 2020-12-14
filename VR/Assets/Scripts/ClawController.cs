@@ -11,7 +11,7 @@ public class ClawController : MonoBehaviour {
     void Start() {
         for (int i = 0; i < transform.childCount; i++) {
             GameObject child = transform.GetChild(i).gameObject;
-            if (child.name.StartsWith("ClawPivot")) {
+            if (child.taskName.StartsWith("ClawPivot")) {
                 HingeJoint jnt = child.GetComponent<HingeJoint>();
                 JointSpring spring = jnt.spring;
                 spring.spring = 1000;

@@ -23,7 +23,6 @@ public class LinearMappingObjectController : MonoBehaviour {
         velocity *= 0.95f;
         velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, -(mapUpDown.value - 0.5f) * speed, (mapVertical.value - 0.5f) * speed);
         rb.MovePosition(transform.position + velocity);
-
         /*Clamp position within bounds*/
         Vector3 pos = transform.position;
         float x = pos.x > bounds.max.x ? bounds.max.x : pos.x < bounds.min.x ? bounds.min.x : pos.x;
