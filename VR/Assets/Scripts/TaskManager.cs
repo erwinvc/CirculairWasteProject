@@ -10,7 +10,7 @@ public class TaskManager : MonoBehaviour {
     public MonoBehaviour testt;
     public HashSet<TaskBlueprint> blueprints;
 
-    void Start() {
+    void Awake() {
         _Instance = this;
         blueprints = new HashSet<TaskBlueprint>();
         points = 0;
@@ -36,5 +36,9 @@ public class TaskManager : MonoBehaviour {
 
     public static int GetPoints() {
         return _Instance.points;
+    }
+
+    public static HashSet<TaskBlueprint> GetTasks() {
+        return _Instance.blueprints;
     }
 }

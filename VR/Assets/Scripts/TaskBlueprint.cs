@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class TaskBlueprint : MonoBehaviour {
-    private string name;
+    private string taskName;
     private string description;
     private int points;
 
     public TaskBlueprint(string name, string description, int points) {
-        this.name = name;
+        this.taskName = name;
         this.description = description;
         this.points = points;
     }
@@ -23,7 +23,7 @@ public abstract class TaskBlueprint : MonoBehaviour {
     }
 
     public string GetName() {
-        return name;
+        return taskName;
     }
 
     public string GetDescription() {
@@ -33,4 +33,6 @@ public abstract class TaskBlueprint : MonoBehaviour {
     public int GetPoints() {
         return points;
     }
+
+    public abstract bool CanBeDone();
 }

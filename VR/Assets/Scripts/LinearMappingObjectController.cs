@@ -22,7 +22,7 @@ public class LinearMappingObjectController : MonoBehaviour {
         /*Update position based on sliders*/
         velocity *= 0.95f;
         velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, -(mapUpDown.value - 0.5f) * speed, (mapVertical.value - 0.5f) * speed);
-        rb.MovePosition(transform.position +  velocity);
+        rb.MovePosition(transform.position + velocity);
 
         /*Clamp position within bounds*/
         Vector3 pos = transform.position;

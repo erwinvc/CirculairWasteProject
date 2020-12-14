@@ -13,4 +13,8 @@ public class OperateClawTask : TaskBlueprint {
             FinishTask();
         }
     }
+
+    public override bool CanBeDone() {
+        return true;
+    }
 }
