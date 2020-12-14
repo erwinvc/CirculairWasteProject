@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Crusher : MonoBehaviour
 {
-    DoTw
     public void Activate()
     {
 
