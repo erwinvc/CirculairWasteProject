@@ -42,8 +42,10 @@ public class GuideEditor : Editor {
 
         }
 
-        foreach (Node n in node.children) {
-            OnSceneGUINode(n, node);
+        if (node.children != null) {
+            foreach (Node n in node.children) {
+                OnSceneGUINode(n, node);
+            }
         }
     }
 
