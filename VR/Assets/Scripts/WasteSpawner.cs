@@ -5,7 +5,6 @@ using UnityEngine;
 public class WasteSpawner : MonoBehaviour {
     public List<GameObject> prefabs;
 
-    bool started = true;
     int iterations = 100;
     bool looping = false;
     GameObject spawnPoint;
