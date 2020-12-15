@@ -9,6 +9,8 @@ public class LookAtWristTest : MonoBehaviour {
     public GameObject sphere;
     public GameObject tablet;
 
+    private FillTaskList ftl;
+
     private bool armCurrentlyVisible = false;
     private float lookingAtArmValue = -0.95f;
     private float lookingAwayFromArmValue = -0.75f;
@@ -25,6 +27,12 @@ public class LookAtWristTest : MonoBehaviour {
         DebugLineRenderer.Draw(attachmentPoint.transform.position, attachmentPoint.transform.position + armVector, armCurrentlyVisible ? Color.green : Color.red);
         DebugLineRenderer.Draw(attachmentPoint.transform.position, attachmentPoint.transform.position + headToArmVector, Color.blue);
 
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("space pressed");
+            ftl.UpdateTaskList();
+        }
         if (armCurrentlyVisible) {
             if (Vector3.Dot(armVector, headToArmVector) <= lookingAwayFromArmValue && Vector3.Dot(head.transform.forward, -headToArmVector) <= lookingAwayFromArmValue) return;
             tablet.SetActive(false);

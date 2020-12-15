@@ -11,6 +11,7 @@ TagManager:
   - WasteGlass
   - WastePlastic
   - WastePaper
+  - UIClickable
   layers:
   - Default
   - TransparentFX
