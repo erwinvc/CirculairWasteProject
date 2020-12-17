@@ -12,8 +12,6 @@ public class FillTaskList : MonoBehaviour
     private GameObject taskTest;
     private Vector3 offSet;
 
-    public Sprite sprSelected, sprNotSelected;
-
     private TextMeshProUGUI textComponent;
 
     private void Start()
@@ -26,26 +24,9 @@ public class FillTaskList : MonoBehaviour
         foreach (TaskBlueprint task in tm.blueprints)
         {
             taskTest = Instantiate(taskPrefab, taskPrefab.transform.localPosition + offSet, Quaternion.identity);
-           
             taskTest.transform.SetParent(content.transform, false);
             taskTest.transform.localScale = taskPrefab.transform.localScale;
             offSet.y -= 15;
-
-            if (task.GetSelected())
-            {
-                Image img;
-               
-                img = taskTest.GetComponent<Image>();
-                img.sprite = sprSelected;
-                Debug.Log(img.sprite.name);
-            }
-            else
-            {
-                Image img;
-
-                img = taskTest.GetComponent<Image>();
-                img.sprite = sprNotSelected;
-            }
 
             //check all of the children of the prefab 
             foreach (Transform child in taskTest.transform)

@@ -5,7 +5,7 @@ using Valve.VR.InteractionSystem;
 
 public class OperateClawTask : TaskBlueprint {
     public TeleportPoint tpPoint;
-    public OperateClawTask() : base("Operator", "Operate the claw", 100, true) {
+    public OperateClawTask() : base("Operator", "Operate the claw", 100) {
     }
 
     private void FixedUpdate() {

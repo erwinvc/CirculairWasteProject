@@ -15,6 +15,7 @@ public class SceneHandler : MonoBehaviour
 
     public FillTaskList ftl;
     public Scrollbar sb;
+    public GameObject content;
 
     private bool pointerOnScroll;
     void Awake()
@@ -34,26 +35,41 @@ public class SceneHandler : MonoBehaviour
             ftl.UpdateTaskList();
         }
 
-        if(e.target.name == sb.name)
+        if (e.target.CompareTag("UIClickable"))
         {
-            Debug.Log("HIT");
-            sb.value = 0;
+            foreach (Transform child in content.transform)
+            {
+                child.GetComponent<Image>().color = Color.white;
+            }
+             e.target.gameObject.GetComponent<Image>().color = Color.green;
+        }
+
+        if (e.target.name == "MoveScrollUp")
+        {
+            sb.value += 0.1f;
+        }
+
+        if (e.target.name == "MoveScrollDown")
+        {
+            sb.value -= 0.1f;
         }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == sb.name)
-        {
-            pointerOnScroll = true;
-        }
+        //if(e.target.name == "MoveScrollUp")
+        //{
+        //    sb.value += 0.01f;
+        //}
+
+        //if (e.target.name == "MoveScrollDown")
+        //{
+        //    sb.value -= 0.01f;
+        //}
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == sb.name)
-        {
-            pointerOnScroll = false;
-        }
+        
     }
 }
