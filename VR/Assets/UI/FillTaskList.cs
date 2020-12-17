@@ -1,42 +1,77 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class FillTaskList : MonoBehaviour
 {
     public TaskManager tm;
-    private TaskBlueprint task;
     public GameObject taskPrefab;
     public GameObject content;
     private GameObject taskTest;
-    private int offSet;
+    private Vector3 offSet;
+
+    public Sprite sprSelected, sprNotSelected;
+
+    private TextMeshProUGUI textComponent;
 
     private void Start()
     {
-        offSet = 0;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("space pressed");
-            UpdateTaskList();
-        }
+        offSet =  new Vector3(0, 0, 0);
     }
 
     public void UpdateTaskList()
     {
         foreach (TaskBlueprint task in tm.blueprints)
         {
-            taskTest = Instantiate(taskPrefab, Vector3.zero, Quaternion.identity);
-            taskTest.transform.SetParent(content.transform);
+            taskTest = Instantiate(taskPrefab, taskPrefab.transform.localPosition + offSet, Quaternion.identity);
+           
+            taskTest.transform.SetParent(content.transform, false);
             taskTest.transform.localScale = taskPrefab.transform.localScale;
-            taskTest.transform.position = new Vector3(0, 0 + offSet, 0);
-            offSet += 20;
+            offSet.y -= 15;
 
-            Debug.Log(task.GetName());
-            Debug.Log(taskTest.transform.ToString());
+            if (task.GetSelected())
+            {
+                Image img;
+               
+                img = taskTest.GetComponent<Image>();
+                img.sprite = sprSelected;
+                Debug.Log(img.sprite.name);
+            }
+            else
+            {
+                Image img;
+
+                img = taskTest.GetComponent<Image>();
+                img.sprite = sprNotSelected;
+            }
+
+            //check all of the children of the prefab 
+            foreach (Transform child in taskTest.transform)
+            {
+                string childName = child.name;
+
+                //fill field text based on result
+                switch (childName)
+                {
+                    case "TaskTitle":
+                        textComponent = child.GetComponent<TextMeshProUGUI>();
+                        textComponent.text = task.GetName();
+                        break;
+                    case "TaskDescription":
+                        textComponent = child.GetComponent<TextMeshProUGUI>();
+                        textComponent.text = task.GetDescription();
+                        break;
+                    case "TaskPoints":
+                        textComponent = child.GetComponent<TextMeshProUGUI>();
+                        textComponent.text = task.GetPoints().ToString();
+                        break;
+                    default:
+                        Debug.Log("no match");
+                        break;
+                }
+            }
         }
     }
 }

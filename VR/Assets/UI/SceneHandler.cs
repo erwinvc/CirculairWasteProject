@@ -1,6 +1,7 @@
 ﻿/* SceneHandler.cs*/
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,51 +10,50 @@ using Valve.VR.Extras;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject welcomeSceenDisplay;
+    public GameObject tasksScreenDisplay;
 
+    public FillTaskList ftl;
+    public Scrollbar sb;
+
+    private bool pointerOnScroll;
     void Awake()
     {
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
-
-    public void PointerClick(object sender, PointerEventArgs e)
+    
+    public void PointerClick(object  sender, PointerEventArgs e)
     {
-        
+        Debug.Log(e.target.name);
         if (e.target.name == "ButtonBegin")
         {
-            Debug.Log("PointerTest");
-            
+            welcomeSceenDisplay.SetActive(false);
+            tasksScreenDisplay.SetActive(true);
+            ftl.UpdateTaskList();
         }
-        else if (e.target.name == "Tablet_Test")
+
+        if(e.target.name == sb.name)
         {
-            Debug.Log("display was clicked");
+            Debug.Log("HIT");
+            sb.value = 0;
         }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-       // Debug.Log("TestInside");
-        if (e.target.name == "ButtonBegin")
+        if (e.target.name == sb.name)
         {
-            Debug.Log("ButtonBegin was entered");
-        }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was entered");
+            pointerOnScroll = true;
         }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-       // Debug.Log("ButtonOutside");
-        if (e.target.name == "ButtonBegin")
+        if (e.target.name == sb.name)
         {
-            Debug.Log("ButtonBegin was exited");
-        }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was exited");
+            pointerOnScroll = false;
         }
     }
 }

@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 837292484604722556}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: UIClickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3e32f1036ae322245b9aa2b6a84ae738, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

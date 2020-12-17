@@ -6,11 +6,13 @@ public abstract class TaskBlueprint : MonoBehaviour {
     private string taskName;
     private string description;
     private int points;
+    private bool selected;
 
-    public TaskBlueprint(string name, string description, int points) {
+    public TaskBlueprint(string name, string description, int points, bool selected) {
         this.taskName = name;
         this.description = description;
         this.points = points;
+        this.selected = selected;
     }
 
     private void Start() {
@@ -32,6 +34,11 @@ public abstract class TaskBlueprint : MonoBehaviour {
 
     public int GetPoints() {
         return points;
+    }
+
+    public bool GetSelected()
+    {
+        return selected;
     }
 
     public abstract bool CanBeDone();

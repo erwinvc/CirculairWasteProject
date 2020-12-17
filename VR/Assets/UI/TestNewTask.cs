@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TestNewTask : TaskBlueprint
 {
-    public TestNewTask() : base("SecondTask", "TestingTheSecondTask", 5)
+    public TestNewTask() : base("Mess around", "Touch the floor", 10, false)
     {
+
     }
 
     private void FixedUpdate()

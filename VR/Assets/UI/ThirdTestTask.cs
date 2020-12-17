@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThirdTestTask : TaskBlueprint
 {
-    public ThirdTestTask() : base("ThirdTask", "This is the description of the third task", 5)
+    public ThirdTestTask() : base("Sorting matters", "Sort 5 pieces of trash", 100, false)
     {
     }
 
