@@ -34,6 +34,7 @@ public class GuideEditor : Editor {
             node.position = Handles.PositionHandle(node.position, Quaternion.identity);
         } else {
             Handles.color = node == guide.baseNode ? Color.red : Color.white;
+            Handles.color = node.parent != null ? Color.white : Color.red;
             if (Handles.Button(node.position, Quaternion.identity, 0.2f, 0.2f, Handles.SphereHandleCap)) {
                 if (Event.current.type == EventType.KeyDown)
                     Debug.Log("Shift");
@@ -55,6 +56,10 @@ public class GuideEditor : Editor {
         serializedObject.Update();
 
         DrawDefaultInspector();
+
+        if (GUILayout.Button("Fix parenting")) {
+            FixParenting();
+        }
 
         if (selectedNode != null) {
             Undo.RecordObject(guide, "MovingNode");
@@ -79,6 +84,20 @@ public class GuideEditor : Editor {
         serializedObject.ApplyModifiedProperties();
     }
 
+    void FixParenting() {
+        Guide guide = target as Guide;
+        List<Node> nodes = new List<Node>();
+        guide.baseNode.CollectChildNodes(nodes);
+        foreach (Node node in nodes) {
+            foreach (Node other in nodes) {
+                if (node.children != null) {
+                    if (node.children.Contains(other)) {
+                        other.parent = node;
+                    }
+                }
+            }
+        }
+    }
     void DeleteNode() {
         Guide guide = target as Guide;
         Undo.RecordObject(guide, "DeletingNode");
