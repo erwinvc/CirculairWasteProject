@@ -10822,7 +10822,7 @@ GameObject:
   - component: {fileID: 515473538}
   - component: {fileID: 515473539}
   m_Layer: 26
-  m_Name: GameObject
+  m_Name: LaserPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10859,8 +10859,8 @@ MonoBehaviour:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 1
   active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
-  thickness: 0.001
+  color: {r: 1, g: 0, b: 0, a: 0}
+  thickness: 0.0001
   clickColor: {r: 0, g: 1, b: 0, a: 1}
   holder: {fileID: 0}
   pointer: {fileID: 0}
@@ -13795,8 +13795,8 @@ RectTransform:
   m_Father: {fileID: 1645027480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.7144878}
+  m_AnchorMax: {x: 1, y: 0.9915792}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26485,7 +26485,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: abc99b8d5464b0844a7f64a170b053eb, type: 2}
     - target: {fileID: 1144064872905282091, guid: b8817739a12421d41bc6e0ae1b4cafe4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4568821357995790037, guid: b8817739a12421d41bc6e0ae1b4cafe4, type: 3}
       propertyPath: m_SortingOrder
@@ -26593,7 +26593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8078529356068075132, guid: b8817739a12421d41bc6e0ae1b4cafe4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8078529356563500766, guid: b8817739a12421d41bc6e0ae1b4cafe4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27969,7 +27969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3.1763794}
+  m_AnchoredPosition: {x: 0, y: 6.0779905}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1323428072 stripped
@@ -29465,9 +29465,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1406374850
 MonoBehaviour:
@@ -33430,6 +33430,7 @@ MonoBehaviour:
   attachmentPoint: {fileID: 252737054}
   sphere: {fileID: 1009012207}
   tablet: {fileID: 859825756}
+  laser: {fileID: 515473537}
 --- !u!1 &1642927452 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8582008543425174303, guid: 9213a156cc726d041bf4f18b3f5083ae, type: 3}
@@ -35701,7 +35702,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 650433355}
   m_HandleRect: {fileID: 650433354}
   m_Direction: 2
-  m_Value: 0.99391246
+  m_Value: 0.98835146
   m_Size: 0.27709138
   m_NumberOfSteps: 0
   m_OnValueChanged:
