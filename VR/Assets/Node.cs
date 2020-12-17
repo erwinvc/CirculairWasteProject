@@ -31,4 +31,36 @@ public class Node {
             parent.children.Remove(this);
         }
     }
+
+    public void CollectChildNodes(List<Node> nodes) {
+        nodes.Add(this);
+        if (children != null) {
+            foreach (var child in children) {
+                child.CollectChildNodes(nodes);
+            }
+        }
+    }
+
+    public bool FindPath(Node end, List<Node> nodes, Node sourceNode) {
+        if (this == end) {
+            nodes.Add(this);
+            return true;
+        }
+
+        if (children != null) {
+            foreach (var child in children) {
+                if (child == sourceNode) continue;
+                if (child.FindPath(end, nodes, this)) {
+                    nodes.Add(this);
+                    return true;
+                }
+            }
+        }
+
+        if (parent != null && parent != sourceNode && parent.FindPath(end, nodes, this)) {
+            nodes.Add(this);
+            return true;
+        }
+        return false;
+    }
 }

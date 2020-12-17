@@ -7,7 +7,7 @@ public class LinearMappingObjectController : MonoBehaviour {
     public LinearMapping mapVertical;
     public LinearMapping mapHorizontal;
     public LinearMapping mapUpDown;
-
+    private Vector3 pos;
     private Rigidbody rb;
     private Vector3 velocity = new Vector3();
     private float speed = 0.003f;
@@ -19,12 +19,14 @@ public class LinearMappingObjectController : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        rb.position = pos;
         /*Update position based on sliders*/
         velocity *= 0.95f;
         velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, -(mapUpDown.value - 0.5f) * speed, (mapVertical.value - 0.5f) * speed);
         rb.MovePosition(transform.position + velocity);
+        
         /*Clamp position within bounds*/
-        Vector3 pos = transform.position;
+        pos = transform.position;
         float x = pos.x > bounds.max.x ? bounds.max.x : pos.x < bounds.min.x ? bounds.min.x : pos.x;
         float y = pos.y > bounds.max.y ? bounds.max.y : pos.y < bounds.min.y ? bounds.min.y : pos.y;
         float z = pos.z > bounds.max.z ? bounds.max.z : pos.z < bounds.min.z ? bounds.min.z : pos.z;

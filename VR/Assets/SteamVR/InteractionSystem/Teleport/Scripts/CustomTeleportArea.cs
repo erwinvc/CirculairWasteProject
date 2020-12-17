@@ -25,10 +25,16 @@ public class CustomTeleportArea : TeleportMarkerBase {
     }
 
     public override void WhileHighlight(Vector3 position) {
+        if (material == null) {
+            material = GetComponent<Renderer>().material;
+        }
         material.SetVector("Point", position);
     }
 
     public override void Highlight(Vector3 position, bool highlight) {
+        if (material == null) {
+            material = GetComponent<Renderer>().material;
+        }
         material.SetVector("Point", highlight ? position : new Vector3(int.MaxValue, int.MaxValue, int.MaxValue));
     }
 
