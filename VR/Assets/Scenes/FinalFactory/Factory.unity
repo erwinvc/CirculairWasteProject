@@ -39272,6 +39272,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4815232551120270970, guid: 85a31228638d15d4eafb02fdeaa7605c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5007350069037598115, guid: 85a31228638d15d4eafb02fdeaa7605c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 127
@@ -39394,7 +39398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7767400254572382962, guid: 85a31228638d15d4eafb02fdeaa7605c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7767400254572382962, guid: 85a31228638d15d4eafb02fdeaa7605c, type: 3}
       propertyPath: m_StaticEditorFlags
