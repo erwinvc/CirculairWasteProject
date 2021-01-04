@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 843e26cc5eeaf374aa2a51a91a84b7a4, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: fc70ba16e1cdddc4695dc7958b90699a, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3427fff93ac75ef45bf71e9b57bb4815, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -10135,7 +10135,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.81e-43, z: 1.7864e-41, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -17736,7 +17736,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.6204e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -24805,6 +24805,22 @@ PrefabInstance:
     - target: {fileID: 1607311133, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
       propertyPath: m_ShadowRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607311133, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607311133, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.4031e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607311133, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 8.97e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607311133, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.3422613e-14
       objectReference: {fileID: 0}
     - target: {fileID: 54086325420618820, guid: a662b3215b7eb26489c790de2cb560be, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34722,7 +34738,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.6843e-41, z: 0, w: 3.015625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -38492,7 +38508,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh129300
+  m_Name: pb_Mesh1103086
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52297,6 +52313,18 @@ PrefabInstance:
     - target: {fileID: 573275759, guid: 80d7524c748659e4881d6c2c77f3a3c8, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633093994, guid: 80d7524c748659e4881d6c2c77f3a3c8, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 4.34984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633093994, guid: 80d7524c748659e4881d6c2c77f3a3c8, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: -0.40695047
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633093994, guid: 80d7524c748659e4881d6c2c77f3a3c8, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -13.279245
       objectReference: {fileID: 0}
     - target: {fileID: 1633093995, guid: 80d7524c748659e4881d6c2c77f3a3c8, type: 3}
       propertyPath: m_RootOrder
