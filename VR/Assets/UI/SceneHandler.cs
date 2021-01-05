@@ -10,6 +10,7 @@ using Valve.VR.Extras;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject upgradesScreenDisplay;
     public GameObject welcomeSceenDisplay;
     public GameObject tasksScreenDisplay;
 
@@ -27,12 +28,23 @@ public class SceneHandler : MonoBehaviour
     
     public void PointerClick(object  sender, PointerEventArgs e)
     {
-        Debug.Log(e.target.name);
         if (e.target.name == "ButtonBegin")
         {
             welcomeSceenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
             ftl.UpdateTaskList();
+        }
+
+        if (e.target.name == "BtnNavUpgrades")
+        {
+            tasksScreenDisplay.SetActive(false);
+            upgradesScreenDisplay.SetActive(true);
+        }
+
+        if (e.target.name == "BtnNavTasks")
+        {
+            upgradesScreenDisplay.SetActive(false);
+            tasksScreenDisplay.SetActive(true);
         }
 
         if (e.target.CompareTag("UIClickable"))
