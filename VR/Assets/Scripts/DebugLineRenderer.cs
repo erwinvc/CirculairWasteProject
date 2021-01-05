@@ -22,6 +22,7 @@ public class DebugLineRenderer : MonoBehaviour {
     private static Color defaultColor = new Color(1, 0, 0, 1);
 
     void Start() {
+        DontDestroyOnLoad(this);
         _Instance = this;
         lines = new List<Line>();
         mesh = new Mesh();
