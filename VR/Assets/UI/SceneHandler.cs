@@ -39,7 +39,7 @@ public class SceneHandler : MonoBehaviour
         {
             foreach (Transform child in content.transform)
             {
-                child.GetComponent<Image>().color = Color.white;
+                child.GetComponent<Image>().color = Color.black;
             }
              e.target.gameObject.GetComponent<Image>().color = Color.green;
         }
