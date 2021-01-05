@@ -6720,6 +6720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet_Test
       objectReference: {fileID: 0}
+    - target: {fileID: 5404244629902878131, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5404244630001407943, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
       propertyPath: m_RootOrder
       value: 2
