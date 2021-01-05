@@ -14,6 +14,7 @@ public class TaskManager : MonoBehaviour {
     public Guide guide;
 
     void Awake() {
+        DontDestroyOnLoad(this);
         _Instance = this;
         blueprints = new HashSet<TaskBlueprint>();
         highlighter = GetComponent<TaskHighlighter>();

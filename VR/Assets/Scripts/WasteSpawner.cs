@@ -23,9 +23,10 @@ public class WasteSpawner : MonoBehaviour {
 
                 Vector3 minPos = position - size * 0.5f;
                 Vector3 maxPos = position + size * 0.5f;
-                Instantiate(prefabs[Random.Range(0, prefabs.Count)],
+                DontDestroyOnLoad(Instantiate(prefabs[Random.Range(0, prefabs.Count)],
                     new Vector3(Random.Range(minPos.x, maxPos.x), Random.Range(minPos.y, maxPos.y),
-                        Random.Range(minPos.z, maxPos.z)), Quaternion.identity);
+                        Random.Range(minPos.z, maxPos.z)), Quaternion.identity));
+                
             }
         }
 
@@ -40,6 +41,8 @@ public class WasteSpawner : MonoBehaviour {
                 if (offset) {
                     obj.transform.position -= offset.offset;
                 }
+
+                DontDestroyOnLoad(obj);
             }
         }
     }

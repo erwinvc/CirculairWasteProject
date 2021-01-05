@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalFactory/Factory.unity
     guid: 467d8b85721bc8849acf58c116e908c0
+  - enabled: 1
+    path: Assets/Scenes/FinalFactory/Factory U1.unity
+    guid: 1a87f5bae6745d44da3501254f0e8fd9
+  - enabled: 1
+    path: Assets/Scenes/FinalFactory/Factory U2.unity
+    guid: 27d898bf25bf0e140a3c822576c580c8
+  - enabled: 1
+    path: Assets/Scenes/FinalFactory/Factory U3.unity
+    guid: 8f8a5eb9ed9ec034d9934a50e3266125
+  - enabled: 1
+    path: Assets/Scenes/FinalFactory/Factory U4.unity
+    guid: bae73c739468b9d488325ae71a72f71f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7334a36e55fa8d74ea2e99744f479444, type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 415cc5e084c1f884688b2371d7c66be8, type: 2}
