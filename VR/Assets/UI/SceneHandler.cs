@@ -12,6 +12,7 @@ public class SceneHandler : MonoBehaviour
     public SteamVR_LaserPointer laserPointer;
     public GameObject welcomeSceenDisplay;
     public GameObject tasksScreenDisplay;
+    public GameObject upgradesScreenDisplay;
 
     public FillTaskList ftl;
     public Scrollbar sb;
@@ -35,6 +36,17 @@ public class SceneHandler : MonoBehaviour
             ftl.UpdateTaskList();
         }
 
+        if (e.target.name == "BtnNavUpgrades")
+        {
+            tasksScreenDisplay.SetActive(true);
+            upgradesScreenDisplay.SetActive(true);
+        }
+
+        if (e.target.name == "BtnNavTasks")
+        {
+            upgradesScreenDisplay.SetActive(false);
+            tasksScreenDisplay.SetActive(true);
+        }
         if (e.target.CompareTag("UIClickable"))
         {
             foreach (Transform child in content.transform)
