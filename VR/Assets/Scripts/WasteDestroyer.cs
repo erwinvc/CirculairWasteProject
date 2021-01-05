@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class WasteDestroyer : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
-        Destroy(other.gameObject);
+
+        switch (other.tag) {
+            case "WasteMetal":
+            case "WasteGlass":
+            case "WastePlastic":
+            case "WastePaper": Destroy(other.gameObject); break;
+        }
     }
 }
