@@ -53,7 +53,6 @@ public class SceneHandler : MonoBehaviour
             {
                 child.GetComponent<Image>().color = Color.black;
             }
-             e.target.gameObject.GetComponent<Image>().color = Color.green;
         }
 
         if (e.target.name == "MoveScrollUp")
