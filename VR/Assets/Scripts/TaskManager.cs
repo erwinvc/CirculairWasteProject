@@ -9,6 +9,7 @@ public class TaskManager : MonoBehaviour {
     private int points;
     public HashSet<TaskBlueprint> blueprints;
     private TaskBlueprint selectedTask;
+    public FillTaskList ftl;
 
     private TaskHighlighter highlighter;
     public Guide guide;
@@ -28,6 +29,8 @@ public class TaskManager : MonoBehaviour {
     private void _FinishTask(TaskBlueprint task) {
         points += task.GetPoints();
         print($"{task.GetName()} completed!");
+        blueprints.Remove(task);
+        ftl.UpdateTaskList();
     }
 
     private void _RegisterTask(TaskBlueprint task) {
