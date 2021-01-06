@@ -13,6 +13,11 @@ public class SceneHandler : MonoBehaviour
     public GameObject welcomeSceenDisplay;
     public GameObject tasksScreenDisplay;
     public GameObject upgradesScreenDisplay;
+    public UpgradeManager um;
+    private int upgradeAmount = 100;
+
+
+    public ScoreToUI scoreToUI;
 
     public FillTaskList ftl;
     public Scrollbar sb;
@@ -21,12 +26,12 @@ public class SceneHandler : MonoBehaviour
     private bool pointerOnScroll;
     void Awake()
     {
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
+        //laserPointer.PointerIn += PointerInside;
+        //laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
-    
-    public void PointerClick(object  sender, PointerEventArgs e)
+
+    public void PointerClick(object sender, PointerEventArgs e)
     {
         Debug.Log(e.target.name);
         if (e.target.name == "ButtonBegin")
@@ -34,26 +39,45 @@ public class SceneHandler : MonoBehaviour
             welcomeSceenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
             ftl.UpdateTaskList();
+            scoreToUI.ScoreToUIText();
+            sb.value = 1;
         }
 
         if (e.target.name == "BtnNavUpgrades")
         {
             tasksScreenDisplay.SetActive(true);
             upgradesScreenDisplay.SetActive(true);
+            scoreToUI.ScoreToUIText();
         }
 
         if (e.target.name == "BtnNavTasks")
         {
+            sb.value = 1;
             upgradesScreenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
+            scoreToUI.ScoreToUIText();
+            ftl.UpdateTaskList();
         }
+
+        if (e.target.name == "BtnUpgrade")
+        {
+            int totalPoints = TaskManager.GetPoints();
+            if (totalPoints >= upgradeAmount)
+            {
+                scoreToUI.pointsUntilUpgrade += 100;
+                upgradeAmount += 100;
+                scoreToUI.CalculateRemaining();
+                um.Upgrade();
+            }
+        }
+
         if (e.target.CompareTag("UIClickable"))
         {
             foreach (Transform child in content.transform)
             {
                 child.GetComponent<Image>().color = Color.black;
             }
-             e.target.gameObject.GetComponent<Image>().color = Color.green;
+            e.target.gameObject.GetComponent<Image>().color = Color.green;
         }
 
         if (e.target.name == "MoveScrollUp")
@@ -65,23 +89,5 @@ public class SceneHandler : MonoBehaviour
         {
             sb.value -= 0.1f;
         }
-    }
-
-    public void PointerInside(object sender, PointerEventArgs e)
-    {
-        //if(e.target.name == "MoveScrollUp")
-        //{
-        //    sb.value += 0.01f;
-        //}
-
-        //if (e.target.name == "MoveScrollDown")
-        //{
-        //    sb.value -= 0.01f;
-        //}
-    }
-
-    public void PointerOutside(object sender, PointerEventArgs e)
-    {
-        
     }
 }
