@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestNewTask : TaskBlueprint
+public class ManuallySortTask : TaskBlueprint
 {
-    public TestNewTask() : base("Mess around", "Touch the floor", 10)
+    public ManuallySortTask() : base("Manually Sort", "Touch the floor", 50)
     {
     }
 

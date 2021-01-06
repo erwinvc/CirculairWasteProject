@@ -14,6 +14,7 @@ public class FillTaskList : MonoBehaviour
 
     private bool firstTime;
     private TextMeshProUGUI textComponent;
+    public ScoreToUI stUI;
 
     private void Start()
     {
@@ -22,22 +23,26 @@ public class FillTaskList : MonoBehaviour
 
     public void UpdateTaskList()
     {
+        stUI.CalculateRemaining();
+
+        if (firstTime)
+        {
+            foreach (Transform child in content.transform)
+            {
+                offSet = Vector3.zero;
+                Destroy(child.gameObject);
+            }
+        }
+
+        firstTime = true;
+
         foreach (TaskBlueprint task in tm.blueprints)
         {
             taskTest = Instantiate(taskPrefab, taskPrefab.transform.localPosition + offSet, Quaternion.identity);
             taskTest.transform.SetParent(content.transform, false);
             taskTest.transform.localScale = taskPrefab.transform.localScale;
             offSet.y -= 15;
-
-            if (firstTime)
-            {
-                foreach (Transform child in taskTest.transform)
-                {
-                    Destroy(child.gameObject);
-                }
-            }
-
-            firstTime = true;
+           
 
             //check all of the children of the prefab 
             foreach (Transform child in taskTest.transform)

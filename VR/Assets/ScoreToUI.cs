@@ -7,20 +7,26 @@ public class ScoreToUI : MonoBehaviour
 {
     public TextMeshProUGUI textScoreTasks, textScoreUpgrades;
     public TextMeshProUGUI textUpgradeNeeded, textUpgradeCurrentAmount;
-    public int points;
-    TaskBlueprint selectedTask;
-    
+    public FillTaskList ftl;
+    public int currentPoints;
+
+    int pointsUntilUpgrade = 100;
+    int pointsTemp;
 
     public void ScoreToUIText()
     {
-        points = TaskManager.GetPoints();
+        currentPoints = TaskManager.GetPoints();
         textScoreTasks.text = TaskManager.GetPoints().ToString();
         textScoreUpgrades.text = TaskManager.GetPoints().ToString();
+    }   
 
+    public void CalculateRemaining()
+    {
+        currentPoints = TaskManager.GetPoints();
+        pointsTemp = pointsUntilUpgrade;
+        pointsUntilUpgrade = pointsUntilUpgrade - currentPoints;
         textUpgradeCurrentAmount.text = ($"You have {TaskManager.GetPoints()} points!");
-
-
-        textUpgradeNeeded.text = ($"You need {TaskManager.GetPoints()} more!");
-
+        textUpgradeNeeded.text = ($"You need {pointsUntilUpgrade.ToString()} more!");
+        pointsUntilUpgrade = pointsTemp;
     }
 }

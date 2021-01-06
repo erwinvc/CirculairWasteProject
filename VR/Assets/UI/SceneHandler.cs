@@ -37,6 +37,7 @@ public class SceneHandler : MonoBehaviour
             tasksScreenDisplay.SetActive(true);
             ftl.UpdateTaskList();
             scoreToUI.ScoreToUIText();
+            sb.value = 1;
         }
 
         if (e.target.name == "BtnNavUpgrades")
@@ -48,6 +49,7 @@ public class SceneHandler : MonoBehaviour
 
         if (e.target.name == "BtnNavTasks")
         {
+            sb.value = 1;
             upgradesScreenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
             scoreToUI.ScoreToUIText();

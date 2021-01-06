@@ -24,6 +24,7 @@ public abstract class TaskBlueprint : MonoBehaviour {
     protected void FinishTask() {
         TaskManager.FinishTask(this);
         gameObject.SetActive(false);
+
     }
 
     public string GetName() {
