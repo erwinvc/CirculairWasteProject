@@ -23,7 +23,6 @@ public class IntroButton : MonoBehaviour {
             pastIntroArrow.SetActive(transform);
             Destroy(floorIntro.gameObject);
             floorPastIntro.gameObject.SetActive(true);
-            Teleport.instance.UpdateTeleportMarkers();
             playing = false;
             door.DOLocalRotate(new Vector3(0, 45, 0), 5).SetEase(Ease.InOutExpo);
         });

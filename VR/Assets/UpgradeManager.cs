@@ -21,14 +21,14 @@ public class UpgradeManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Upgrade();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //    Upgrade();
+        //}
     }
 
     public void Upgrade() {
-        upgrade++;
         string sceneName = upgrades[upgrade];
+        upgrade++;
         SceneManager.LoadScene(sceneName);
         wasteSpawner.Enable();
     }

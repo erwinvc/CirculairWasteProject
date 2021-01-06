@@ -187,11 +187,6 @@ namespace Valve.VR.InteractionSystem {
             Invoke("ShowTeleportHint", 5.0f);
         }
 
-        public void UpdateTeleportMarkers() {
-            teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
-        }
-
-
         //-------------------------------------------------
         void OnEnable() {
             chaperoneInfoInitializedAction.enabled = true;

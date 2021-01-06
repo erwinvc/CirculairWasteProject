@@ -12,6 +12,7 @@ public class TaskManager : MonoBehaviour {
 
     private TaskHighlighter highlighter;
     public Guide guide;
+    private int completedTasks = 0;
 
     void Awake() {
         DontDestroyOnLoad(this);
@@ -28,6 +29,8 @@ public class TaskManager : MonoBehaviour {
     private void _FinishTask(TaskBlueprint task) {
         points += task.GetPoints();
         print($"{task.GetName()} completed!");
+        if (completedTasks == 0) SoundEffectManager.Play(completedTasks == 0 ? "FirstTaskCompleted" : "TaskCompleted");
+        completedTasks++;
     }
 
     private void _RegisterTask(TaskBlueprint task) {
