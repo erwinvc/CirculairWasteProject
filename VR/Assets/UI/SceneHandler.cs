@@ -23,8 +23,8 @@ public class SceneHandler : MonoBehaviour
     private bool pointerOnScroll;
     void Awake()
     {
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
+        //laserPointer.PointerIn += PointerInside;
+        //laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
     
@@ -57,13 +57,14 @@ public class SceneHandler : MonoBehaviour
         {
 
         }
-        //if (e.target.CompareTag("UIClickable"))
-        //{
-        //    foreach (Transform child in content.transform)
-        //    {
-        //        child.GetComponent<Image>().color = Color.black;
-        //    }
-        //}
+        if (e.target.CompareTag("UIClickable"))
+        {
+            foreach (Transform child in content.transform)
+            {
+                child.GetComponent<Image>().color = Color.black;
+            }
+            e.target.gameObject.GetComponent<Image>().color = Color.green;
+        }
 
         if (e.target.name == "MoveScrollUp")
         {
@@ -74,23 +75,5 @@ public class SceneHandler : MonoBehaviour
         {
             sb.value -= 0.1f;
         }
-    }
-
-    public void PointerInside(object sender, PointerEventArgs e)
-    {
-        //if(e.target.name == "MoveScrollUp")
-        //{
-        //    sb.value += 0.01f;
-        //}
-
-        //if (e.target.name == "MoveScrollDown")
-        //{
-        //    sb.value -= 0.01f;
-        //}
-    }
-
-    public void PointerOutside(object sender, PointerEventArgs e)
-    {
-        
     }
 }

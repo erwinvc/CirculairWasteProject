@@ -12,6 +12,7 @@ public class FillTaskList : MonoBehaviour
     private GameObject taskTest;
     private Vector3 offSet;
 
+    private bool firstTime;
     private TextMeshProUGUI textComponent;
 
     private void Start()
@@ -27,6 +28,16 @@ public class FillTaskList : MonoBehaviour
             taskTest.transform.SetParent(content.transform, false);
             taskTest.transform.localScale = taskPrefab.transform.localScale;
             offSet.y -= 15;
+
+            if (firstTime)
+            {
+                foreach (Transform child in taskTest.transform)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+
+            firstTime = true;
 
             //check all of the children of the prefab 
             foreach (Transform child in taskTest.transform)
