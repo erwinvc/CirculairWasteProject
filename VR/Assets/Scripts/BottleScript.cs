@@ -8,7 +8,7 @@ public class BottleScript : MonoBehaviour {
         float mag = collision.relativeVelocity.magnitude;
         if (mag > 1.5f && mag < 3.0f) {
             SoundEffectManager.SpawnTemporaryAudioSourceRandomIndex("GlassImpact", transform, true).Play();
-        } else if (collision.relativeVelocity.magnitude > 3.0f) {
+        } else if (collision.relativeVelocity.magnitude > 3.0f || collision.gameObject.name == "CrusherEnd") {
             Rigidbody orb = GetComponent<Rigidbody>();
             GameObject brokenBottle = Instantiate(bottleBroken, transform.position, transform.rotation);
             foreach (Rigidbody rb in brokenBottle.GetComponentsInChildren<Rigidbody>()) {
@@ -17,9 +17,12 @@ public class BottleScript : MonoBehaviour {
             }
 
             SoundEffectManager.SpawnTemporaryAudioSourceRandomIndex("GlassShatter", brokenBottle.transform, true).Play();
-
-            Destroy(brokenBottle, 6.0f);
+            
+           
             Destroy(gameObject);
+            Destroy(brokenBottle, 6.0f);
+            
+            
         }
     }
 }

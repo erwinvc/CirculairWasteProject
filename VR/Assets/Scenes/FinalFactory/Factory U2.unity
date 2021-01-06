@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11467267, g: 0.33109385, b: 0.7166458, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35479,8 +35479,9 @@ GameObject:
   - component: {fileID: 1590269491}
   - component: {fileID: 1590269493}
   - component: {fileID: 1590269492}
+  - component: {fileID: 1590269494}
   m_Layer: 0
-  m_Name: pCube6
+  m_Name: CrusherEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35549,6 +35550,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590269490}
   m_Mesh: {fileID: 6606501483488557099, guid: 4c99e94a5335ee64480b0635072f8465, type: 3}
+--- !u!65 &1590269494
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590269490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 0.12, z: 0.36}
+  m_Center: {x: -1.4556539, y: -0.47, z: 3.32514}
 --- !u!1001 &1596693652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36471,6 +36485,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3900350877528525920, guid: 5ffd42dc743a58b4f80dd9d4ff4e2ed7, type: 3}
+      propertyPath: waste.Array.data[0]
+      value: 
+      objectReference: {fileID: 3042361498430900585, guid: 7b63729153e0b38448b3ef73aa0bf99f, type: 3}
     - target: {fileID: 4036382038713849377, guid: 5ffd42dc743a58b4f80dd9d4ff4e2ed7, type: 3}
       propertyPath: m_Name
       value: TunnelSpawnerGlass
@@ -37628,7 +37646,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1003132
+  m_Name: pb_Mesh934370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41543,8 +41561,9 @@ GameObject:
   - component: {fileID: 1853218011}
   - component: {fileID: 1853218013}
   - component: {fileID: 1853218012}
+  - component: {fileID: 1853218014}
   m_Layer: 0
-  m_Name: pCube6
+  m_Name: CrusherEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41613,6 +41632,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853218010}
   m_Mesh: {fileID: 6606501483488557099, guid: 4c99e94a5335ee64480b0635072f8465, type: 3}
+--- !u!65 &1853218014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853218010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 0.12, z: 0.36}
+  m_Center: {x: -1.4556539, y: -0.47, z: 3.32514}
 --- !u!1001 &1861134874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41921,8 +41953,9 @@ GameObject:
   - component: {fileID: 1877413407}
   - component: {fileID: 1877413409}
   - component: {fileID: 1877413408}
+  - component: {fileID: 1877413410}
   m_Layer: 0
-  m_Name: pCube6
+  m_Name: CrusherEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41991,6 +42024,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877413406}
   m_Mesh: {fileID: 6606501483488557099, guid: 4c99e94a5335ee64480b0635072f8465, type: 3}
+--- !u!65 &1877413410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877413406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 0.12, z: 0.36}
+  m_Center: {x: -1.4556539, y: -0.47, z: 3.32514}
 --- !u!4 &1877832287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 215879121445549995, guid: 3ca147af188c4d14cb7415cc2e8c9ad5, type: 3}
@@ -47808,13 +47854,27 @@ GameObject:
   - component: {fileID: 7461994059307631898}
   - component: {fileID: 377622813225701688}
   - component: {fileID: 4508783167257516748}
+  - component: {fileID: 1490168297697063888}
   m_Layer: 0
-  m_Name: pCube6
+  m_Name: CrusherEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1490168297697063888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490168297697063887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 0.12, z: 0.36}
+  m_Center: {x: -1.4556539, y: -0.47, z: 3.32514}
 --- !u!4 &1555087855798529259
 Transform:
   m_ObjectHideFlags: 0
