@@ -7,10 +7,11 @@ public class LinearMappingObjectController : MonoBehaviour {
     public LinearMapping mapVertical;
     public LinearMapping mapHorizontal;
     public LinearMapping mapUpDown;
+    //public ClawCollider clawCollider;
     private Vector3 pos;
     private Rigidbody rb;
     private Vector3 velocity = new Vector3();
-    private float speed = 0.003f;
+    private float speed = 0.002f;
 
     public Bounds bounds = new Bounds(new Vector3(0, 0, 0), new Vector3(1, 1, 1));
 
@@ -22,9 +23,11 @@ public class LinearMappingObjectController : MonoBehaviour {
         rb.position = pos;
         /*Update position based on sliders*/
         velocity *= 0.95f;
-        velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, -(mapUpDown.value - 0.5f) * speed, (mapVertical.value - 0.5f) * speed);
+
+        float mapUpDownValue = -(mapUpDown.value - 0.5f) * speed;
+        velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, mapUpDownValue, (mapVertical.value - 0.5f) * speed);
         rb.MovePosition(transform.position + velocity);
-        
+
         /*Clamp position within bounds*/
         pos = transform.position;
         float x = pos.x > bounds.max.x ? bounds.max.x : pos.x < bounds.min.x ? bounds.min.x : pos.x;

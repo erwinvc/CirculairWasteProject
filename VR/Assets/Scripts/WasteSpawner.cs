@@ -9,7 +9,9 @@ public class WasteSpawner : MonoBehaviour {
     bool looping = false;
     GameObject spawnPoint;
     private int index = 0;
+
     private void Start() {
+        DontDestroyOnLoad(this);
         spawnPoint = transform.GetChild(0).gameObject;
     }
 
@@ -26,7 +28,7 @@ public class WasteSpawner : MonoBehaviour {
                 DontDestroyOnLoad(Instantiate(prefabs[Random.Range(0, prefabs.Count)],
                     new Vector3(Random.Range(minPos.x, maxPos.x), Random.Range(minPos.y, maxPos.y),
                         Random.Range(minPos.z, maxPos.z)), Quaternion.identity));
-                
+
             }
         }
 
@@ -49,5 +51,9 @@ public class WasteSpawner : MonoBehaviour {
 
     public void ToggleLoop() {
         looping ^= true;
+    }
+
+    public void Enable() {
+        looping = true;
     }
 }

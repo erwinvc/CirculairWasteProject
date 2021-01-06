@@ -38,7 +38,6 @@ namespace Valve.VR.InteractionSystem
         private Vector3 handEnteredPosition;
 
         private bool hovering;
-
         private Hand lastHoveredHand;
 
         private void Start()
@@ -55,9 +54,7 @@ namespace Valve.VR.InteractionSystem
         {
             hovering = true;
             lastHoveredHand = hand;
-
             bool wasEngaged = engaged;
-
             float currentDistance = Vector3.Distance(movingPart.parent.InverseTransformPoint(hand.transform.position), endPosition);
             float enteredDistance = Vector3.Distance(handEnteredPosition, endPosition);
 
@@ -104,8 +101,10 @@ namespace Valve.VR.InteractionSystem
                 onButtonDown.Invoke(lastHoveredHand);
             if (buttonUp && onButtonUp != null)
                 onButtonUp.Invoke(lastHoveredHand);
-            if (isEngaged && onButtonIsPressed != null)
+            if (isEngaged && !wasEngaged && onButtonIsPressed != null)
+            {
                 onButtonIsPressed.Invoke(lastHoveredHand);
+            }
         }
     }
 }
