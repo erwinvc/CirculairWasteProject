@@ -7,8 +7,10 @@ public class WasteDestroyer : MonoBehaviour {
 
         switch (other.tag) {
             case "WasteMetal":
+            case "WasteIron":
             case "WasteGlass":
             case "WastePlastic":
+            case "WasteBale":
             case "WastePaper": Destroy(other.gameObject, 0.5f); break;
         }
     }

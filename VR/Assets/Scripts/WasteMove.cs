@@ -41,6 +41,7 @@ public class WasteMove : MonoBehaviour {
             case "WasteGlass": return WasteType.GLASS;
             case "WastePlastic": return WasteType.PLASTIC;
             case "WastePaper": return WasteType.PAPER;
+            case "WasteIron": return WasteType.METAL;
         }
 
         return WasteType.NONE;

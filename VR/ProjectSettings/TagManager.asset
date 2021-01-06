@@ -13,6 +13,10 @@ TagManager:
   - WastePaper
   - UIClickable
   - WastePile
+  - Hand
+  - WasteIron
+  - WasteBale
+  - Crusher
   layers:
   - Default
   - TransparentFX

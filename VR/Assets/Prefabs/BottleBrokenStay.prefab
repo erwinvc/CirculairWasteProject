@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 4444271511612897754}
   - component: {fileID: 5050487131553920791}
   - component: {fileID: 780582042298077677}
-  - component: {fileID: 2640253580823101544}
   m_Layer: 0
   m_Name: pCylinder2_cell.021
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,18 +113,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2640253580823101544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501500464858664568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2169260540114520144
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,10 +126,9 @@ GameObject:
   - component: {fileID: 9099129990589906698}
   - component: {fileID: 2399280969001968368}
   - component: {fileID: 889112906185268175}
-  - component: {fileID: 4971103736583709391}
   m_Layer: 0
   m_Name: pCylinder2_cell.017
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,18 +226,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4971103736583709391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2169260540114520144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2311954362925847746
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,10 +239,9 @@ GameObject:
   - component: {fileID: 8189285097596781909}
   - component: {fileID: 1414836229171585780}
   - component: {fileID: 8673740037259939666}
-  - component: {fileID: 4990850314645185077}
   m_Layer: 0
   m_Name: pCylinder2_cell.016
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,18 +339,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4990850314645185077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2311954362925847746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2738921104177084096
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,10 +352,9 @@ GameObject:
   - component: {fileID: 8121916622056568152}
   - component: {fileID: 1353096051931391236}
   - component: {fileID: 1243542382076251592}
-  - component: {fileID: 1291804705105153076}
   m_Layer: 0
   m_Name: pCylinder2_cell.018
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,18 +452,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1291804705105153076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2738921104177084096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3984946112103638890
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,10 +465,9 @@ GameObject:
   - component: {fileID: 3893419590908366003}
   - component: {fileID: 7511460494394565447}
   - component: {fileID: 5377084643251356085}
-  - component: {fileID: 6962007640068410560}
   m_Layer: 0
   m_Name: pCylinder2_cell.020
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,18 +565,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6962007640068410560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984946112103638890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4990697417507892282
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,10 +578,9 @@ GameObject:
   - component: {fileID: 7044555548465575361}
   - component: {fileID: 7554835156430436110}
   - component: {fileID: 5248115171208580788}
-  - component: {fileID: 6997469525524171039}
   m_Layer: 0
   m_Name: pCylinder2_cell.023
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -744,18 +678,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6997469525524171039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4990697417507892282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5664153560081631008
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5030746234111810970}
   m_Layer: 0
-  m_Name: BottleBroken
+  m_Name: BottleBrokenStay
   m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -810,10 +732,9 @@ GameObject:
   - component: {fileID: 1987093545244222732}
   - component: {fileID: 3456717587072603109}
   - component: {fileID: 8314310152439471193}
-  - component: {fileID: 4491257082985126737}
   m_Layer: 0
   m_Name: pCylinder2_cell.008
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,18 +832,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4491257082985126737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7152648432031068205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8397412349641945362
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,10 +845,9 @@ GameObject:
   - component: {fileID: 575249531867434987}
   - component: {fileID: 8761553940822699535}
   - component: {fileID: 758470325499683459}
-  - component: {fileID: 6311498767379330843}
   m_Layer: 0
   m_Name: pCylinder2_cell.004
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1037,18 +945,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6311498767379330843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8397412349641945362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8727131794251995606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,10 +958,9 @@ GameObject:
   - component: {fileID: 5224940605523371576}
   - component: {fileID: 3532596066709740553}
   - component: {fileID: 280593008599549841}
-  - component: {fileID: 5721478090060220083}
   m_Layer: 0
   m_Name: pCylinder2_cell.002
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1163,18 +1058,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5721478090060220083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727131794251995606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9086675548185969193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,10 +1071,9 @@ GameObject:
   - component: {fileID: 2987034288546796092}
   - component: {fileID: 208660478871224465}
   - component: {fileID: 2120423828993992889}
-  - component: {fileID: 4955344051874559976}
   m_Layer: 0
   m_Name: pCylinder2_cell.022
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1290,18 +1172,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4955344051874559976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9086675548185969193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9127543662525543858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,10 +1185,9 @@ GameObject:
   - component: {fileID: 5770912549735016688}
   - component: {fileID: 5965344585364752619}
   - component: {fileID: 978464774798657281}
-  - component: {fileID: 6053889960080344739}
   m_Layer: 0
   m_Name: pCylinder2_cell.006
-  m_TagString: Untagged
+  m_TagString: WasteGlass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1416,15 +1285,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6053889960080344739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9127543662525543858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3c8cc6f2f826b4cae3a648e87b74c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

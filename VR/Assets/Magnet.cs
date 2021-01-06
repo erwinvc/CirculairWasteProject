@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Magnet : MonoBehaviour {
-    // Start is called before the first frame update
-    void Start() {
+    private List<Rigidbody> rbs = new List<Rigidbody>();
 
+    public bool working = false;
+
+    public void SetWorking(bool toggle) {
+        working = toggle;
     }
-
-    // Update is called once per frame
-    void Update() {
-
+    private void FixedUpdate() {
+        if (working) {
+            foreach (Rigidbody rb in rbs) {
+                rb.AddForce(Vector3.up * 25);
+            }
+        }
     }
-
-    private void OnTriggerStay(Collider other) {
-        switch (other.tag) {
-            case "WasteMetal":
-            case "WasteGlass":
-            case "WastePlastic":
-            case "WastePaper": MagnetGameObject(other.gameObject); break;
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "WasteIron") {
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb && !rbs.Contains(rb)) rbs.Add(rb);
         }
     }
 
-    private void MagnetGameObject(GameObject obj) {
-        obj.GetComponent<Rigidbody>().AddForce(Vector3.up);
+    private void OnTriggerExit(Collider other) {
+        if (other.tag == "WasteIron") {
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb) rbs.Remove(rb);
+        }
     }
 }

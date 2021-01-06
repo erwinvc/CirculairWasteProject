@@ -187,6 +187,10 @@ namespace Valve.VR.InteractionSystem {
             Invoke("ShowTeleportHint", 5.0f);
         }
 
+        public void UpdateTeleportMarkers() {
+            teleportMarkers = GameObject.FindObjectsOfType<TeleportMarkerBase>();
+        }
+
 
         //-------------------------------------------------
         void OnEnable() {
@@ -612,7 +616,9 @@ namespace Valve.VR.InteractionSystem {
                 teleportPointerObject.SetActive(false);
                 teleportArc.Show();
 
-                foreach (TeleportMarkerBase teleportMarker in teleportMarkers) {
+                foreach (TeleportMarkerBase teleportMarker in teleportMarkers)
+                {
+                    if (teleportMarker == null) continue;
                     if (teleportMarker.markerActive && teleportMarker.ShouldActivate(player.feetPositionGuess)) {
                         teleportMarker.gameObject.SetActive(true);
                         teleportMarker.Highlight(hitPoint, false);

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ConveyorBelt : MonoBehaviour {
     public float speed = 0.1f;
+    public bool working = true;
 
     private Rigidbody rb;
     private Vector3 originalPosition;
@@ -14,8 +15,14 @@ public class ConveyorBelt : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        rb.position += (transform.right * Time.fixedDeltaTime * speed);
-        rb.MovePosition(originalPosition);
+        if (working) {
+            rb.position += (transform.right * Time.fixedDeltaTime * speed);
+            rb.MovePosition(originalPosition);
+        }
+    }
+
+    public void SetWorking(bool toggle) {
+        working = toggle;
     }
 }
 

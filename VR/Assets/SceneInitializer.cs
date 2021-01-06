@@ -9,9 +9,18 @@ public class SceneInitializer : MonoBehaviour {
     void Start() {
         DontDestroyOnLoad(this);
         if (!initialized) {
-            if (SceneManager.GetActiveScene().buildIndex != 0)
+            if (SceneManager.GetActiveScene().buildIndex != 0) {
+                DeleteAll();
                 SceneManager.LoadScene(0);
+            }
+
             initialized = true;
+        }
+    }
+
+    public void DeleteAll() {
+        foreach (GameObject o in Object.FindObjectsOfType<GameObject>()) {
+            Destroy(o);
         }
     }
 }
