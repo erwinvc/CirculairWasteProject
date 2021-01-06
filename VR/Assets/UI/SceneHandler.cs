@@ -13,6 +13,9 @@ public class SceneHandler : MonoBehaviour
     public GameObject welcomeSceenDisplay;
     public GameObject tasksScreenDisplay;
     public GameObject upgradesScreenDisplay;
+    public UpgradeManager um;
+    private int upgrade = 1;
+
 
     public ScoreToUI scoreToUI;
 
@@ -53,12 +56,20 @@ public class SceneHandler : MonoBehaviour
             upgradesScreenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
             scoreToUI.ScoreToUIText();
+            ftl.UpdateTaskList();
         }
 
         if(e.target.name == "BtnUpgrade")
         {
-
+            int totalPoints = TaskManager.GetPoints();
+            if (totalPoints >= upgrade * 100)
+            {                
+                scoreToUI.pointsUntilUpgrade += 100;
+                scoreToUI.CalculateRemaining();
+                um.Upgrade();
+            }
         }
+
         if (e.target.CompareTag("UIClickable"))
         {
             foreach (Transform child in content.transform)

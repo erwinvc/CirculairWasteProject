@@ -10,7 +10,7 @@ public class ScoreToUI : MonoBehaviour
     public FillTaskList ftl;
     public int currentPoints;
 
-    int pointsUntilUpgrade = 100;
+    public int pointsUntilUpgrade = 100;
     int pointsTemp;
 
     public void ScoreToUIText()

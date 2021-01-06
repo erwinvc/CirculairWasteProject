@@ -1452,6 +1452,7 @@ MonoBehaviour:
   welcomeSceenDisplay: {fileID: 91131263}
   tasksScreenDisplay: {fileID: 96702599}
   upgradesScreenDisplay: {fileID: 2037192748}
+  um: {fileID: 1831448205}
   scoreToUI: {fileID: 91277757}
   ftl: {fileID: 2076711231}
   sb: {fileID: 937584540}
@@ -1780,6 +1781,7 @@ MonoBehaviour:
   textUpgradeCurrentAmount: {fileID: 11307319}
   ftl: {fileID: 2076711231}
   currentPoints: 0
+  pointsUntilUpgrade: 100
 --- !u!4 &91277758
 Transform:
   m_ObjectHideFlags: 0
@@ -19034,6 +19036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da1a2ba875ae924e898a5787a094197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tpPoint: {fileID: 881610906}
 --- !u!1 &920698251
 GameObject:
   m_ObjectHideFlags: 0

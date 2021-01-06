@@ -26,7 +26,8 @@ public class UpgradeManager : MonoBehaviour {
         }
     }
 
-    void Upgrade() {
+    public void Upgrade()
+    {
         upgrade++;
         string sceneName = upgrades[upgrade];
         SceneManager.LoadScene(sceneName);

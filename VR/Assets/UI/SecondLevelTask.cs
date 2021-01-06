@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThirdTestTask : TaskBlueprint
+public class SecondLevelTask : TaskBlueprint
 {
-    public ThirdTestTask() : base("Dummy Task", "This is a dummy task", 100)
+    public SecondLevelTask() : base("Dummy Task", "This is a dummy task", 100)
     {
     }
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
     private void FixedUpdate()
     {
 
