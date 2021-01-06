@@ -8,9 +8,12 @@ public class TunnelWasteSpawner : MonoBehaviour {
     public List<GameObject> waste;
 
     private DateTime cooldown = DateTime.Now;
+
     void FixedUpdate() {
         if ((DateTime.Now - cooldown).TotalSeconds > 1.0f) {
-            DontDestroyOnLoad(Instantiate(waste[UnityEngine.Random.Range(0, waste.Count - 1)], spawnPosition.position, Quaternion.identity));
+            DontDestroyOnLoad(Instantiate(waste[UnityEngine.Random.Range(0, waste.Count - 1)], spawnPosition.position,
+                Quaternion.identity));
             cooldown = DateTime.Now;
+        }
     }
 }

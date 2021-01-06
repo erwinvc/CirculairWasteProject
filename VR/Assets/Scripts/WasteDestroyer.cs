@@ -9,7 +9,7 @@ public class WasteDestroyer : MonoBehaviour {
             case "WasteMetal":
             case "WasteGlass":
             case "WastePlastic":
-            case "WastePaper": Destroy(other.gameObject); break;
+            case "WastePaper": Destroy(other.gameObject, 0.5f); break;
         }
     }
 }

@@ -22,7 +22,7 @@ public class TaskManager : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        highlighter.Highlight(selectedTask);
+        //highlighter.Highlight(selectedTask);
     }
 
     private void _FinishTask(TaskBlueprint task) {

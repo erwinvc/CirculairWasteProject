@@ -10,9 +10,9 @@ using Valve.VR.Extras;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    public GameObject upgradesScreenDisplay;
     public GameObject welcomeSceenDisplay;
     public GameObject tasksScreenDisplay;
+    public GameObject upgradesScreenDisplay;
 
     public FillTaskList ftl;
     public Scrollbar sb;
@@ -28,6 +28,7 @@ public class SceneHandler : MonoBehaviour
     
     public void PointerClick(object  sender, PointerEventArgs e)
     {
+        Debug.Log(e.target.name);
         if (e.target.name == "ButtonBegin")
         {
             welcomeSceenDisplay.SetActive(false);
@@ -37,7 +38,7 @@ public class SceneHandler : MonoBehaviour
 
         if (e.target.name == "BtnNavUpgrades")
         {
-            tasksScreenDisplay.SetActive(false);
+            tasksScreenDisplay.SetActive(true);
             upgradesScreenDisplay.SetActive(true);
         }
 
@@ -46,12 +47,11 @@ public class SceneHandler : MonoBehaviour
             upgradesScreenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
         }
-
         if (e.target.CompareTag("UIClickable"))
         {
             foreach (Transform child in content.transform)
             {
-                child.GetComponent<Image>().color = Color.white;
+                child.GetComponent<Image>().color = Color.black;
             }
              e.target.gameObject.GetComponent<Image>().color = Color.green;
         }

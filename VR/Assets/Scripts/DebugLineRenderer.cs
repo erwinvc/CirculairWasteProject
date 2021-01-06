@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class DebugLineRenderer : MonoBehaviour {
     private struct Line {
         public Vector3 start;
@@ -63,3 +64,16 @@ public class DebugLineRenderer : MonoBehaviour {
         _Instance.lines.Add(new Line(start, end, color));
     }
 }
+
+#else
+
+public class DebugLineRenderer : MonoBehaviour {
+    void Start() {
+        DontDestroyOnLoad(this);
+    }
+
+    public static void Draw(Vector3 start, Vector3 end, Color color) {
+    }
+}
+
+#endif
