@@ -14,6 +14,8 @@ public class SceneHandler : MonoBehaviour
     public GameObject tasksScreenDisplay;
     public GameObject upgradesScreenDisplay;
 
+    public ScoreToUI scoreToUI;
+
     public FillTaskList ftl;
     public Scrollbar sb;
     public GameObject content;
@@ -34,26 +36,34 @@ public class SceneHandler : MonoBehaviour
             welcomeSceenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
             ftl.UpdateTaskList();
+            scoreToUI.ScoreToUIText();
         }
 
         if (e.target.name == "BtnNavUpgrades")
         {
             tasksScreenDisplay.SetActive(true);
             upgradesScreenDisplay.SetActive(true);
+            scoreToUI.ScoreToUIText();
         }
 
         if (e.target.name == "BtnNavTasks")
         {
             upgradesScreenDisplay.SetActive(false);
             tasksScreenDisplay.SetActive(true);
+            scoreToUI.ScoreToUIText();
         }
-        if (e.target.CompareTag("UIClickable"))
+
+        if(e.target.name == "BtnUpgrade")
         {
-            foreach (Transform child in content.transform)
-            {
-                child.GetComponent<Image>().color = Color.black;
-            }
+
         }
+        //if (e.target.CompareTag("UIClickable"))
+        //{
+        //    foreach (Transform child in content.transform)
+        //    {
+        //        child.GetComponent<Image>().color = Color.black;
+        //    }
+        //}
 
         if (e.target.name == "MoveScrollUp")
         {

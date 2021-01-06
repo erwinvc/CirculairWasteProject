@@ -8,6 +8,7 @@ public class LookAtWristTest : MonoBehaviour {
     public GameObject attachmentPoint;
     public GameObject sphere;
     public GameObject tablet, laser;
+    public ScoreToUI scoreToUI;
 
     private bool armCurrentlyVisible = false;
     private float lookingAtArmValue = -0.95f;
@@ -37,6 +38,7 @@ public class LookAtWristTest : MonoBehaviour {
             if (Vector3.Dot(armVector, headToArmVector) >= lookingAtArmValue || Vector3.Dot(head.transform.forward, -headToArmVector) >= lookingAtArmValue) return;
             tablet.SetActive(true);
             laser.SetActive(true);
+            scoreToUI.ScoreToUIText();
             armCurrentlyVisible = true;
             
         }
