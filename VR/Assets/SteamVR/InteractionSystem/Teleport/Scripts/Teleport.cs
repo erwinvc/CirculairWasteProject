@@ -744,7 +744,7 @@ namespace Valve.VR.InteractionSystem {
             headAudioSource.transform.SetParent(player.hmdTransform);
             headAudioSource.transform.localPosition = Vector3.zero;
             PlayAudioClip(headAudioSource, teleportSound);
-
+            teleportingToMarker.Highlight(hitPoint, false);
             Invoke("TeleportPlayer", currentFadeTime);
         }
 
@@ -803,7 +803,7 @@ namespace Valve.VR.InteractionSystem {
             {
                 if (pointedAtTeleportMarker != null) {
                     pointedAtTeleportMarker.Highlight(hitPoint, false);
-                }
+                } 
 
                 if (hitTeleportMarker != null) {
                     hitTeleportMarker.Highlight(hitPoint, true);

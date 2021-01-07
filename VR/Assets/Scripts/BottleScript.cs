@@ -15,8 +15,6 @@ public class BottleScript : MonoBehaviour {
                     rb.velocity = orb.velocity;
                     rb.angularVelocity = orb.angularVelocity;
                 }
-
-                Destroy(brokenBottle, 6.0f);
                 Destroy(gameObject);
             }
         } else {

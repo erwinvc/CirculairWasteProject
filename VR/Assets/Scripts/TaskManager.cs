@@ -7,24 +7,26 @@ public class TaskManager : MonoBehaviour {
     private static TaskManager _Instance;
 
     private int points;
-    public HashSet<TaskBlueprint> blueprints;
+    public List<TaskBlueprint> blueprints;
     private TaskBlueprint selectedTask;
     public FillTaskList ftl;
 
-    private TaskHighlighter highlighter;
     public Guide guide;
     private int completedTasks = 0;
+    public GameObject highligher;
 
     void Awake() {
         DontDestroyOnLoad(this);
         _Instance = this;
-        blueprints = new HashSet<TaskBlueprint>();
-        highlighter = GetComponent<TaskHighlighter>();
+        blueprints = new List<TaskBlueprint>();
         points = 0;
     }
 
     private void FixedUpdate() {
-        //highlighter.Highlight(selectedTask);
+        if (blueprints.Count > 0 && selectedTask != null) {
+            highligher.SetActive(true);
+            highligher.GetComponent<LookAtPlayer>().position = blueprints[0].GetPosition();
+        } else highligher.SetActive(false);
     }
 
     private void _FinishTask(TaskBlueprint task) {
@@ -32,7 +34,13 @@ public class TaskManager : MonoBehaviour {
         print($"{task.GetName()} completed!");
         blueprints.Remove(task);
         ftl.UpdateTaskList();
-        if (completedTasks == 0) SoundEffectManager.Play(completedTasks == 0 ? "FirstTaskCompleted" : "TaskCompleted");
+        if (completedTasks == 0) {
+            SoundEffectManager.Play("FirstTaskCompleted");
+        } else if (completedTasks == 1) {
+            SoundEffectManager.Play("SecondTaskCompleted");
+        } else {
+            SoundEffectManager.Play("TaskCompleted");
+        }
         completedTasks++;
     }
 
@@ -54,7 +62,7 @@ public class TaskManager : MonoBehaviour {
         return _Instance.points;
     }
 
-    public static HashSet<TaskBlueprint> GetTasks() {
+    public static List<TaskBlueprint> GetTasks() {
         return _Instance.blueprints;
     }
 
