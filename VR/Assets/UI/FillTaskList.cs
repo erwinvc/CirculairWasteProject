@@ -18,6 +18,7 @@ public class FillTaskList : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
         offSet = new Vector3(0, 0, 0);
     }
 
