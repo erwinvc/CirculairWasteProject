@@ -49,6 +49,7 @@ public class Crusher : MonoBehaviour {
 
     public void ActivateOnce() {
         if (activateOnceSequence == null || !activateOnceSequence.active) {
+            CrusherTask.Finished = true;
             Vector3 pos = movingPart.position;
             pos.y = endPoint.position.y;
             activateOnceSequence = DOTween.Sequence()

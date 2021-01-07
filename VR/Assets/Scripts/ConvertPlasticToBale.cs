@@ -8,6 +8,7 @@ public class ConvertPlasticToBale : MonoBehaviour
     int amountOfWasteCollected = 0; //To keep track of the amount of waste that's fallen into the compressor
     int amountOfWastePerBlock = 3; //The amount of waste needed for a block
     public GameObject wasteBlockPrefab; //The prefab of the waste block object;
+    private int blocksProduced = 0;
 
     void Start()
     {

@@ -9,6 +9,7 @@ public class Magnet : MonoBehaviour {
 
     public void SetWorking(bool toggle) {
         working = toggle;
+        MagnetTask.Finished = true;
     }
     private void FixedUpdate() {
         if (working) {

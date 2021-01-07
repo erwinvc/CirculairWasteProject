@@ -24,6 +24,7 @@ public class FillTaskList : MonoBehaviour
     public void UpdateTaskList()
     {
         stUI.CalculateRemaining();
+        stUI.ScoreToUIText();
 
         if (firstTime)
         {
@@ -38,7 +39,6 @@ public class FillTaskList : MonoBehaviour
 
         foreach (TaskBlueprint task in tm.blueprints)
         {
-            Debug.Log(task.GetName());
             taskTest = Instantiate(taskPrefab, taskPrefab.transform.localPosition + offSet, Quaternion.identity);
             taskTest.transform.SetParent(content.transform, false);
             taskTest.transform.localScale = taskPrefab.transform.localScale;
