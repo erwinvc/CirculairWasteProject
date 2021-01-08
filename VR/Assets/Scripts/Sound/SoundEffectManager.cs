@@ -74,7 +74,7 @@ public class SoundEffectManager : MonoBehaviour {
     private GameObject m_mainCamera;
     private GameObject m_audioSourceObject;
     public AudioListener m_audioListener;
-    private const int AUDIOSOURCECOUNT = 5;
+    private const int AUDIOSOURCECOUNT = 15;
     private AudioSource[] m_sources = new AudioSource[AUDIOSOURCECOUNT];
     public List<SoundEffectDefinition> soundEffectDefinitions = new List<SoundEffectDefinition>();
     private AudioMixerGroup m_mixerGroup;

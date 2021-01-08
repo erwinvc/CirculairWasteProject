@@ -122,7 +122,6 @@ public class SoundtrackManager : MonoBehaviour {
     void Start() {
         DontDestroyOnLoad(this);
 
-        _FadeTo("Factory");
     }
 
 
@@ -197,6 +196,9 @@ public class SoundtrackManager : MonoBehaviour {
         foreach (SoundtrackFader fader in m_faders) {
             fader.Update();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            _FadeTo("Factory");
     }
 
     /*Internal*/

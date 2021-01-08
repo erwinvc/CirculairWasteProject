@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottleBroken: {fileID: 5664153560081631008, guid: 0d0da08616f6df14888f29900a9450e6, type: 3}
+  hard: 0
 --- !u!65 &4081679562990825496
 BoxCollider:
   m_ObjectHideFlags: 0
