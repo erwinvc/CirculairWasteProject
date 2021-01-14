@@ -45,7 +45,7 @@ public class SceneHandler : MonoBehaviour
 
         if (e.target.name == "BtnNavUpgrades")
         {
-            tasksScreenDisplay.SetActive(true);
+            tasksScreenDisplay.SetActive(false);
             upgradesScreenDisplay.SetActive(true);
             scoreToUI.ScoreToUIText();
         }
