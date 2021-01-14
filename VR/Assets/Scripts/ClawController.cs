@@ -7,6 +7,7 @@ public class ClawController : MonoBehaviour {
     private List<Rigidbody> rbs = new List<Rigidbody>();
     private List<HingeJoint> joints = new List<HingeJoint>();
     public LinearMapping openCloseLinearMapping;
+    
 
     void Start() {
         for (int i = 0; i < transform.childCount; i++) {

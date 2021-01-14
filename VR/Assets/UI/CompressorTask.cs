@@ -5,8 +5,8 @@ using Valve.VR.InteractionSystem;
 
 public class CompressorTask : TaskBlueprint
 {
-    public TeleportPoint tpPoint;
-    public CompressorTask() : base("Watch compressor", "Find Teleport Point Near Compressor!", 100)
+    public GameObject compressor;
+    public CompressorTask() : base("Watch compressor", "Move to the compressor!", 100)
     {
     }
 
@@ -17,7 +17,8 @@ public class CompressorTask : TaskBlueprint
 
     private void FixedUpdate()
     {
-        if (Teleport.instance.currentTeleportMarker == tpPoint)
+       // Debug.Log(Vector3.Distance(player.transform.position, compressor.transform.position));
+        if (Vector3.Distance(GlobalPlayer.globalObject.transform.position, compressor.transform.position) < 10f)
         {
             FinishTask();
         }

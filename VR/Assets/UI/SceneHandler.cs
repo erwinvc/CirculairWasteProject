@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
+using Valve.VR.InteractionSystem;
 
 public class SceneHandler : MonoBehaviour
 {
@@ -15,8 +16,7 @@ public class SceneHandler : MonoBehaviour
     public GameObject upgradesScreenDisplay;
     public UpgradeManager um;
     private int upgradeAmount = 100;
-
-
+    public GameObject player;
     public ScoreToUI scoreToUI;
 
     public FillTaskList ftl;
@@ -61,6 +61,7 @@ public class SceneHandler : MonoBehaviour
 
         if (e.target.name == "BtnUpgrade")
         {
+            
             int totalPoints = TaskManager.GetPoints();
             if (totalPoints >= upgradeAmount)
             {

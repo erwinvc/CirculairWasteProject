@@ -5356,15 +5356,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8f210484cdf3f8142b1b38b3ca5ef6cc, type: 3}
     - target: {fileID: 4630043664841718883, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4630043664908439426, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4630043665919162315, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4630043666111237200, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
       propertyPath: m_IsActive
@@ -33180,6 +33180,10 @@ PrefabInstance:
       propertyPath: um
       value: 
       objectReference: {fileID: 1831448205}
+    - target: {fileID: 8423973326124654242, guid: f5cd5d9949198964981cf5ed259d3e7d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1633618166}
     - target: {fileID: 8423973326124654243, guid: f5cd5d9949198964981cf5ed259d3e7d, type: 3}
       propertyPath: m_Name
       value: SceneHandler
@@ -34488,6 +34492,11 @@ MonoBehaviour:
   sphere: {fileID: 1009012207}
   tablet: {fileID: 299063050}
   laser: {fileID: 515473537}
+--- !u!1 &1633618166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1633618162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634168237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4630043665919162315, guid: 9fc8521f7b750784a8e1facdc3e5dfa6, type: 3}
@@ -38079,6 +38088,14 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c0ec06c869894c848a45d5a6df6cf283, type: 3}
     - {fileID: 8300000, guid: cbfe14898207dc1418dc57c5d25d99f2, type: 3}
     volume: 1
+    randomPitch: 0
+    pitchMax: 1
+    pitchMin: 1
+    muted: 0
+  - name: CraneMovement
+    clips:
+    - {fileID: 8300000, guid: ef8e554fabd6084428c3935b3342af88, type: 3}
+    volume: 0.5
     randomPitch: 0
     pitchMax: 1
     pitchMin: 1
@@ -46133,7 +46150,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20720
+  m_Name: pb_Mesh118880
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54146,6 +54163,10 @@ PrefabInstance:
       propertyPath: bounds.m_Center.z
       value: -9.556726
       objectReference: {fileID: 0}
+    - target: {fileID: 7927161054703073151, guid: 445fc0b449c90f04aa63efbf59307609, type: 3}
+      propertyPath: clawMovingPart
+      value: 
+      objectReference: {fileID: 217303473}
     - target: {fileID: 7927161054729519902, guid: 445fc0b449c90f04aa63efbf59307609, type: 3}
       propertyPath: m_RootOrder
       value: 0
