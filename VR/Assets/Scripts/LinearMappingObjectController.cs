@@ -27,18 +27,14 @@ public class LinearMappingObjectController : MonoBehaviour {
         rb.position = pos;
         /*Update position based on sliders*/
         velocity *= 0.95f;
-       // Debug.Log("Magnitude RB: " + rb.velocity.magnitude.ToString() + "Magnitude R: " + velocity.magnitude.ToString());
         float mapUpDownValue = -(mapUpDown.value - 0.5f) * speed;
         velocity += new Vector3((mapHorizontal.value - 0.5f) * speed, mapUpDownValue, (mapVertical.value - 0.5f) * speed);
         rb.MovePosition(transform.position + velocity);
-
-        Debug.Log(Mathf.Abs(velocity.magnitude).ToString());
+        
         if (Mathf.Abs(velocity.magnitude) > 0.01f && !justPlayed)
         {
             PlaySoundEffect();
         }  
-       
-
        
         /*Clamp position within bounds*/
         pos = transform.position;
@@ -64,8 +60,7 @@ public class LinearMappingObjectController : MonoBehaviour {
             StopSoundEffect();
         }
     }
-
-   
+    
 
     private void PlaySoundEffect()
     {

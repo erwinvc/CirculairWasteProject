@@ -17,7 +17,6 @@ public class CompressorTask : TaskBlueprint
 
     private void FixedUpdate()
     {
-       // Debug.Log(Vector3.Distance(player.transform.position, compressor.transform.position));
         if (Vector3.Distance(GlobalPlayer.globalObject.transform.position, compressor.transform.position) < 10f)
         {
             FinishTask();

@@ -21,9 +21,7 @@ public class UpgradeManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Upgrade();
-        }
+      
     }
 
     public void Upgrade() {
