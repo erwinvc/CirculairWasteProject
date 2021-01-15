@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -6004024403837962636}
   - component: {fileID: -4108412143436638237}
   - component: {fileID: -8851739154312083017}
-  - component: {fileID: 3055533742007689170}
+  - component: {fileID: 3887366276866114365}
   m_Layer: 0
   m_Name: wood long 2
   m_TagString: WastePaper
@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 4651907279272242874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1645947890411709858}
   m_Father: {fileID: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
---- !u!114 &3055533742007689170
+--- !u!114 &3887366276866114365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4651907279272242874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773f7277e5f0ffc43bb16b2fbbd4b972, type: 3}
+  m_Script: {fileID: 11500000, guid: 7345a24c32326cf4f8a393f215f265a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0.094, y: 0, z: 0.344}
+  shreddedPrefab: {fileID: 5479076834983016605, guid: 2f7b934f71038b54c854ecc8c442fdb7, type: 3}
