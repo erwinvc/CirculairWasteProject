@@ -17,9 +17,15 @@ public class CompressorTask : TaskBlueprint
 
     private void FixedUpdate()
     {
-        if (Vector3.Distance(GlobalPlayer.globalObject.transform.position, compressor.transform.position) < 10f)
+        if (compressor != null)
         {
-            FinishTask();
+            if (Vector3.Distance(GlobalPlayer.globalObject.transform.position, compressor.transform.position) < 3f)
+            {
+                FinishTask();
+            }
+        } else
+        {
+            return;
         }
     }
 

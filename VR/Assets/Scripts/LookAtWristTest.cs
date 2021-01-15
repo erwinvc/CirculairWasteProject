@@ -30,7 +30,6 @@ public class LookAtWristTest : MonoBehaviour {
         if (armCurrentlyVisible) {
             if (Vector3.Dot(armVector, headToArmVector) <= lookingAwayFromArmValue && Vector3.Dot(head.transform.forward, -headToArmVector) <= lookingAwayFromArmValue) return;
             tablet.SetActive(false);
-
             laser.SetActive(false);
             armCurrentlyVisible = false;
         } else {

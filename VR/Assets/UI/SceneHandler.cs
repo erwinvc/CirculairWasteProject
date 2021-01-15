@@ -12,16 +12,20 @@ public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
     public GameObject welcomeSceenDisplay;
-    public GameObject tasksScreenDisplay;
+    public  GameObject tasksScreenDisplay;
     public GameObject upgradesScreenDisplay;
+    public GameObject videoScreenDisplay;
     public UpgradeManager um;
     private int upgradeAmount = 100;
     public GameObject player;
     public ScoreToUI scoreToUI;
+    public LookAtWristTest lawt;
 
     public FillTaskList ftl;
     public Scrollbar sb;
     public GameObject content;
+    public static int upgrade = 0;
+    public static bool lookingAtTablet;
 
     private bool pointerOnScroll;
     void Awake()
@@ -31,9 +35,14 @@ public class SceneHandler : MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        Debug.Log(e.target.name);
         if (e.target.name == "ButtonBegin")
         {
             welcomeSceenDisplay.SetActive(false);
@@ -69,6 +78,14 @@ public class SceneHandler : MonoBehaviour
                 upgradeAmount += 100;
                 scoreToUI.CalculateRemaining();
                 um.Upgrade();
+                upgrade++;
+
+                if(upgrade > 3)
+                {
+                    tasksScreenDisplay.SetActive(false);
+                    upgradesScreenDisplay.SetActive(false);
+                    videoScreenDisplay.SetActive(true);
+                } 
             }
         }
 
