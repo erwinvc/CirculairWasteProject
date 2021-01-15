@@ -46,18 +46,21 @@ public class LinearMappingObjectController : MonoBehaviour {
         if (z != pos.z) velocity.z = 0;
         transform.position = new Vector3(x, y, z);
 
-        if (ta.source.isPlaying)
+        if (ta != null)
         {
-            justPlayed = true;
-        }
-        else
-        {
-            justPlayed = false;
-        }
+            if (ta.source.isPlaying)
+            {
+                justPlayed = true;
+            }
+            else
+            {
+                justPlayed = false;
+            }
 
-        if (Mathf.Abs(velocity.magnitude) <= 0.01f && ta.source.isPlaying)
-        {
-            StopSoundEffect();
+            if (Mathf.Abs(velocity.magnitude) <= 0.01f && ta.source.isPlaying)
+            {
+                StopSoundEffect();
+            }
         }
     }
     
